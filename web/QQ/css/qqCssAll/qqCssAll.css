@@ -1,0 +1,234 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body, input, textarea, select, button {
+    font-family: punctuation, "PingFangSC-Regular", "Microsoft Yahei", "sans-serif";
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+html,div,a{
+    display: block;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+i{
+    font-style:normal;
+}
+input{
+    box-sizing: border-box;
+    spellcheck: false;
+}
+input:focus{
+    background-color:#ffffff;
+}
+::-webkit-input-placeholder{
+    color: #A0A0A0;
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+    -webkit-appearance: none!important;
+}
+input:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset!important;
+}
+input,textarea,select{
+    border: 1px solid #C8CBCC;
+}
+textarea{
+    width: 100%;
+    resize: none;
+    display: block;
+    padding: 5px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.cbf{
+    color: #BFBFBF;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.gix{
+    height:41px;
+    width: 100%;
+}
+.tc{
+    text-align: center;
+}
+/*qq空间主页宽度*/
+.wrapper{
+    margin: 0 auto;
+    width: 1046px;
+}
+/*登录宽度*/
+.login-wrapper{
+    width: 996px;
+    margin: 0 auto;
+}
+.qq-bg-img{
+    display: inline-block;
+    width: 17px;
+    background-repeat: no-repeat;
+    height: 16px;
+    position: relative;
+    margin-right: 2px;
+}
+.ui-icon{
+    display: inline-block;
+    background-repeat: no-repeat;
+    font-size: 0;
+    overflow: hidden;
+    -webkit-text-size-adjust: none;
+    width: 16px;
+    height: 16px;
+}
+.icon-red-dot{
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-image: url(https://qzonestyle.gtimg.cn/aoi/sprite/photo-scan-layer.32-yog161220175928.png?max_age=19830212&d=20170104175631);
+    background-position: -384px 0;
+    position: absolute;
+}
+.icon-refresh-v9 {
+    width: 24px;
+    height: 24px;
+    display: block;
+    cursor: pointer;
+}
+.icon-refresh-v10{
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+}
+.icon_qzone_logo{
+    width: 183px;
+    height: 50px;
+    display: block;
+}
+/*发表表情样式*/
+.commentaries-function{
+    height: 28px;
+    margin-top: 10px;
+    width: 100%;
+    position: relative;
+    display: none;
+}
+.commentaries-function .insert-the-expression{
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    display: none;
+    z-index: 100;
+}
+.commentaries-function .insert-the-expression a{
+    display: block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    background-color: #F6FBFE;
+    float: left;
+    line-height: 30px;
+    border-left: 0.5px solid #EEF0F0;
+    border-top: 1px solid #EEF0F0;
+    border-bottom: 1px solid #EEF0F0;
+    border-right: 0.5px solid #EEF0F0;
+}
+.commentaries-function .insert-the-expression a:hover{
+    border: 0.5px solid #2E8DED;
+}
+.commentaries-function .insert-the-expression a:last-child{
+    border-right: 1px solid #EEF0F0;
+}
+.commentaries-function .insert-the-expression a:first-child{
+    border-left: 1px solid #EEF0F0;
+}
+.commentaries-function .insert-the-expression a:first-child:hover{
+    border-left: 0.5px solid #2E8DED;
+}
+.commentaries-function .insert-the-expression a:last-child:hover{
+    border-right: 0.5px solid #2E8DED;
+}
+.commentaries-function .insert-the-expression a img{
+    width: 24px;
+    height: 24px;
+}
+/*发表评论按钮*/
+.publish-show{
+    width: 70px;
+    height: 28px;
+    text-align: center;
+    background-color: #5ccfe6;
+    line-height: 28px;
+    border-radius: 2px;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.publish-show span{
+    color: #ffffff;
+}
+/*发表评论按钮显示*/
+.publish-show:hover{
+    background-color: #6BDCF2;
+}
+.body-center{
+    width: 592px;
+}
+.body-right{
+    width: 242px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    background-color: #ffffff;
+}
+.body-right a{
+    color: #293233;
+}
+
+/*添加样式*/
+.body-right-borderColor-mod{
+    border: 1px solid #c7e5eb;
+}
+/*end*/
+.c_tx3{
+    border-left: 1px solid #ddedf0;
+}
+.c_7e{
+    color: #7e8a8c;
+}
+.c_6{
+    color: #666;
+}
+.c_0{
+    color: #000000;
+}
+.c_9{
+    color: #999;
+}
+.ui_trigbox_b{
+    display: block;
+    width: 10px;
+    height: 10px;
+}
+/*底部样式*/
+.footer .wrapper{
+    text-align: center;
+}
+.footer .wrapper div{
+    display: inline-block;
+
+}
+.footer .wrapper a,.footer .wrapper span{
+    float: left;
+    text-decoration: none;
+}
+.footer .wrapper span{
+    margin-left: 5px;
+    margin-right: 5px;
+}

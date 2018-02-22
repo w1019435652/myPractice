@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springmvc.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.springmvc.entity.User">
+    <id column="u_id" jdbcType="INTEGER" property="uId" />
+    <result column="u_name" jdbcType="VARCHAR" property="uName" />
+    <result column="u_account" jdbcType="VARCHAR" property="uAccount" />
+    <result column="u_pwd" jdbcType="VARCHAR" property="uPwd" />
+    <result column="u_img" jdbcType="VARCHAR" property="uImg" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    u_id, u_name, u_account, u_pwd, u_img
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where u_id = #{uId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user
+    where u_id = #{uId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.springmvc.entity.User">
+    insert into user (u_id, u_name, u_account, 
+      u_pwd, u_img)
+    values (#{uId,jdbcType=INTEGER}, #{uName,jdbcType=VARCHAR}, #{uAccount,jdbcType=VARCHAR}, 
+      #{uPwd,jdbcType=VARCHAR}, #{uImg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.springmvc.entity.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uId != null">
+        u_id,
+      </if>
+      <if test="uName != null">
+        u_name,
+      </if>
+      <if test="uAccount != null">
+        u_account,
+      </if>
+      <if test="uPwd != null">
+        u_pwd,
+      </if>
+      <if test="uImg != null">
+        u_img,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uId != null">
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="uName != null">
+        #{uName,jdbcType=VARCHAR},
+      </if>
+      <if test="uAccount != null">
+        #{uAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="uPwd != null">
+        #{uPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="uImg != null">
+        #{uImg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springmvc.entity.User">
+    update user
+    <set>
+      <if test="uName != null">
+        u_name = #{uName,jdbcType=VARCHAR},
+      </if>
+      <if test="uAccount != null">
+        u_account = #{uAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="uPwd != null">
+        u_pwd = #{uPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="uImg != null">
+        u_img = #{uImg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where u_id = #{uId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springmvc.entity.User">
+    update user
+    set u_name = #{uName,jdbcType=VARCHAR},
+      u_account = #{uAccount,jdbcType=VARCHAR},
+      u_pwd = #{uPwd,jdbcType=VARCHAR},
+      u_img = #{uImg,jdbcType=VARCHAR}
+    where u_id = #{uId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.springmvc.entity.User">
+    <id column="u_id" jdbcType="INTEGER" property="uId" />
+    <result column="u_name" jdbcType="VARCHAR" property="uName" />
+    <result column="u_account" jdbcType="VARCHAR" property="uAccount" />
+    <result column="u_pwd" jdbcType="VARCHAR" property="uPwd" />
+    <result column="u_img" jdbcType="VARCHAR" property="uImg" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    u_id, u_name, u_account, u_pwd, u_img
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user
+    where u_id = #{uId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user
+    where u_id = #{uId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.springmvc.entity.User">
+    insert into user (u_id, u_name, u_account, 
+      u_pwd, u_img)
+    values (#{uId,jdbcType=INTEGER}, #{uName,jdbcType=VARCHAR}, #{uAccount,jdbcType=VARCHAR}, 
+      #{uPwd,jdbcType=VARCHAR}, #{uImg,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.springmvc.entity.User">
+    insert into user
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uId != null">
+        u_id,
+      </if>
+      <if test="uName != null">
+        u_name,
+      </if>
+      <if test="uAccount != null">
+        u_account,
+      </if>
+      <if test="uPwd != null">
+        u_pwd,
+      </if>
+      <if test="uImg != null">
+        u_img,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uId != null">
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="uName != null">
+        #{uName,jdbcType=VARCHAR},
+      </if>
+      <if test="uAccount != null">
+        #{uAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="uPwd != null">
+        #{uPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="uImg != null">
+        #{uImg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springmvc.entity.User">
+    update user
+    <set>
+      <if test="uName != null">
+        u_name = #{uName,jdbcType=VARCHAR},
+      </if>
+      <if test="uAccount != null">
+        u_account = #{uAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="uPwd != null">
+        u_pwd = #{uPwd,jdbcType=VARCHAR},
+      </if>
+      <if test="uImg != null">
+        u_img = #{uImg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where u_id = #{uId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springmvc.entity.User">
+    update user
+    set u_name = #{uName,jdbcType=VARCHAR},
+      u_account = #{uAccount,jdbcType=VARCHAR},
+      u_pwd = #{uPwd,jdbcType=VARCHAR},
+      u_img = #{uImg,jdbcType=VARCHAR}
+    where u_id = #{uId,jdbcType=INTEGER}
+  </update>
+</mapper>

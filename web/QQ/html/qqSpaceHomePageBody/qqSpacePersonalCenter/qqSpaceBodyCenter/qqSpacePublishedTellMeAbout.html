@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet"
+          href="../../css/qqSpaceHomePageBody/qqSpacePersonalCenter/qqSpaceBodyCenter/qqSpaceHomePagePTM.css"/>
+    <script type="text/javascript"
+            src="../../js/qqSpaceHomePageBody/qqSpacePersonalCenter/qqSpaceBodyCenter/qqSpacePublishedTellMeAbout.js"></script>
+</head>
+<body style="background-color: #D8F1F6;">
+<div id="tma-all" class="body-center">
+    <div id="input-published">
+        <textarea id="tma-text" class="fl" placeholder="说点儿什么吧"></textarea>
+
+        <div id="fun" class="tma-f fr">
+            <i class="icon-pic"></i>
+            <i class="icon-new-fun"></i>
+            <ul class="tma-dn">
+                <li class="tma-f-nav"><i class="icon-pic-no2"></i><br/><span>趣图</span></li>
+                <li class="tma-f-nav"><i class="icon-pic-no2"></i><br/><span>气泡</span></li>
+                <li class="tma-f-nav"><i class="icon-pic-no2"></i><br/><span>表情</span></li>
+                <li class="tma-f-nav"><i class="icon-pic-no2"></i><br/><span>闪图</span><i class="icon-new-fun"></i></li>
+            </ul>
+        </div>
+        <div id="music-video" class="tma-f fr">
+            <i class="icon-pic"></i>
+            <ul class="tma-dn">
+                <li class="tma-f-nav"><i class="icon-pic-no2"></i><br/><span>音乐</span><i></i></li>
+                <li class="tma-f-nav"><i class="icon-pic-no2"></i><br/><span>视频</span></li>
+            </ul>
+        </div>
+        <div id="picture" class="tma-f fr">
+            <i class="icon-pic"></i>
+            <ul class="tma-dn">
+                <li class="tma-f-nav"><i class="icon-pic-no2"></i><br/><span>本地</span></li>
+                <li class="tma-f-nav"><i class="icon-pic-no2"></i><br/><span>相册</span></li>
+                <li class="tma-f-nav"><i class="icon-pic-no2"></i><br/><span>截屏</span></li>
+                <li class="tma-f-nav"><i class="icon-pic-no2"></i><br/><span>拼图</span></li>
+            </ul>
+        </div>
+        <div id="header-publish-all" class="commentaries-function ds">
+            <div id="eft" class="header-publish fl">
+                <a href="" class="spacing-1s" onmouseover="bis(0,0)"><i class="icon-refresh-v9" title="插入表情"></i><i class="icon-red-dot"></i></a>
+                <a href=""><i class="icon-refresh-v9" title="提到好友"></i></a>
+                <a href=""><i class="icon-refresh-v9" title="插入话题"></i></a>
+                <div class="insert-the-expression by-interval">
+                    <a href=""><img
+                            src="http://qzonestyle.gtimg.cn/qzone/em/e113@2x.gif" alt=""/></a><a href=""><img
+                        src="http://qzonestyle.gtimg.cn/qzone/em/e163@2x.gif" alt=""/></a><a href=""><img
+                        src="http://qzonestyle.gtimg.cn/qzone/em/e120@2x.gif" alt=""/></a><a href=""><img
+                        src="http://qzonestyle.gtimg.cn/qzone/em/e100@2x.gif" alt=""/></a>
+                </div>
+            </div>
+            <div id="arp" class="fr ">
+                <a href="" class="arp-top autograph fl"><i class="icon-refresh-v9 fl" title="提到好友"></i></a>
+                <span class="arp-top c_tx3"></span>
+                <span class="tvr-text cf_tx3">可见范围：</span>
+                <div class="fr visible-publish">
+                    <div id="tvr" class="fl spacing-1s" onmouseover="bis(0,1)"><span class="cf_tx3">所有人可见</span><i class="ui_trigbox_b fr"></i>
+                        <ul id="visible-all" class="by-interval tma-operation">
+                            <li><a href=""><i class="icon-refresh-v9"></i><span>所有人可见</span></a></li>
+                            <li><a href=""><i class="icon-refresh-v9"></i><span>qq好友可见</span></a></li>
+                            <li><a href=""><i class="icon-refresh-v9"></i><span>部分好友可见</span></a></li>
+                            <li><a href=""><i class="icon-refresh-v9"></i><span>部分好友不可见</span></a></li>
+                            <li><a href=""><i class="icon-refresh-v9"></i><span>仅自己可见</span></a></li>
+                        </ul>
+                    </div>
+                    <a href="" class="publish-show fr"><span>发表</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ds-all" class="body-center">
+        <div id="ds-nav-all">
+            <span class="fl">全部动态</span>
+            <i class="icon-feed-down fl"></i>
+        </div>
+        <ul id="ds-nav">
+            <li><a href="">全部动态</a></li>
+            <li><a href="">相册</a></li>
+            <li><a href="">日志</a></li>
+        </ul>
+        <div id="rds-all" class="fr">
+            <a class="rds" href="" title="刷新动态">
+                <i class="icon-refresh-v9"></i>
+            </a>
+            <a class="rds" href="" title="动态设置">
+                <i class="icon-refresh-v9"></i>
+            </a>
+        </div>
+    </div>
+    <!--空间动态-->
+    <div id="space-dynamic">
+        <div v-for="item in items" class="bis-all body-center ds body-center-css">
+            <div  class="ds-user-img">
+                <a href="" class="fl"><img
+                        :src="item.dynamic_head_portrait"
+                        alt=""/></a>
+                <div class="ds-user-name" class="fl">
+                    <p><a href="">{{item.dynamic_user_name}}</a></p>
+                    <p class="ce">{{item.dynamic_time}}</p>
+                </div>
+                <i class="bis spacing-1s icon-refresh-v9 irv-lower fr"></i>
+                <ul class="tma-operation by-interval">
+                    <li><a href="">
+                        <i class="icon-refresh-v9"></i>
+                        <span>收藏</span>
+                    </a></li>
+                    <li><a href="">
+                        <i class="icon-refresh-v9"></i>
+                        <span>隐藏此动态</span>
+                    </a></li>
+                    <li><a href="">
+                        <i class="icon-refresh-v9"></i>
+                        <span>举报</span>
+                    </a></li>
+                </ul>
+            </div>
+            <div style="height: 400px">
+            </div>
+            <div class="cf-bt-all">
+                <a href="" class="fl">浏览<span class="bt-num">{{item.dynamic_viewed}}</span>次</a>
+                <div class="tfm fr">
+                    <i class="icon-refresh-v9 fr"></i>
+                    <i class="icon-refresh-v9 fr"></i>
+                    <i class="icon-refresh-v9 fr"></i>
+                </div>
+            </div>
+            <div class="thumb-up-all">
+                <div class="thumb-up">
+                    <a href="" class="fl"><i class="icon-v4"></i></a>
+                    <a v-for="friends_praise in item.dynamic_friends_praise" href="">{{friends_praise.dynamic_friends_name}},</a>
+                    <span>等<span class="thumb-num">{{item.dynamic_praise_num}}</span>人觉得很赞</span>
+                </div>
+            </div>
+            <div v-for="user_comments in item.dynamic_user_comments" class="tcs-all">
+                <a href="" class="tcs-user-img fl"><img
+                        :src="user_comments.dynamic_comments_head_portrait"
+                        alt=""/></a>
+                <div class="tcs fl">
+                    <div>
+                        <a href="" class="tcs-user"><span>{{user_comments.dynamic_comments_name}}</span>&nbsp;</a>
+                        <span>:&nbsp;<span class="commentaries">{{user_comments.dynamic_comments_text}}</span></span>
+                    </div>
+                    <div class="ce">
+                        <span>{{user_comments.dynamic_comments_time}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sac-all">
+                <textarea class="sacs fl bcd published-function" placeholder="评论"></textarea>
+
+                <div class="cp fr"><i class="icon-refresh-v9"></i></div>
+            </div>
+            <div class="commentaries-function">
+                <div class="expression-ite fl">
+                    <a class="expression fl spacing-1s bis" title="插入表情" href="javascript:;">
+                        <i class="icon-refresh-v9"></i>
+                        <i class="icon-red-dot"></i>
+                    </a>
+                    <div class="insert-the-expression by-interval"><a href=""><img
+                            src="http://qzonestyle.gtimg.cn/qzone/em/e113@2x.gif" alt=""/></a><a href=""><img
+                            src="http://qzonestyle.gtimg.cn/qzone/em/e163@2x.gif" alt=""/></a><a href=""><img
+                            src="http://qzonestyle.gtimg.cn/qzone/em/e120@2x.gif" alt=""/></a><a href=""><img
+                            src="http://qzonestyle.gtimg.cn/qzone/em/e100@2x.gif" alt=""/></a></div>
+                    <a class="ite fl" title="提到好友" href="">
+                        <i class="icon-refresh-v9"></i>
+                    </a>
+                </div>
+                <div class="published fr">
+                    <input class="private-commentaries fl" type="checkbox"/>
+                    <span class="fl private-comments-text">隐私评论</span>
+                    <i class="icon-diamond fl"></i>
+                    <a class="publish-show fr" href=""><span>发表</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

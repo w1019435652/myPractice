@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springmvc.dao.UserFriendMapper" >
+  <resultMap id="BaseResultMap" type="com.springmvc.entity.UserFriend" >
+    <id column="f_id" property="fId" jdbcType="INTEGER" />
+    <result column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="f_account" property="fAccount" jdbcType="VARCHAR" />
+    <result column="f_intimacy" property="fIntimacy" jdbcType="INTEGER" />
+    <result column="f_addTime" property="fAddtime" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    f_id, u_id, f_account, f_intimacy, f_addTime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user_friend
+    where f_id = #{fId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user_friend
+    where f_id = #{fId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.springmvc.entity.UserFriend" >
+    insert into user_friend (f_id, u_id, f_account, 
+      f_intimacy, f_addTime)
+    values (#{fId,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, #{fAccount,jdbcType=VARCHAR}, 
+      #{fIntimacy,jdbcType=INTEGER}, #{fAddtime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="com.springmvc.entity.UserFriend" >
+    insert into user_friend
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="fId != null" >
+        f_id,
+      </if>
+      <if test="uId != null" >
+        u_id,
+      </if>
+      <if test="fAccount != null" >
+        f_account,
+      </if>
+      <if test="fIntimacy != null" >
+        f_intimacy,
+      </if>
+      <if test="fAddtime != null" >
+        f_addTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="fId != null" >
+        #{fId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null" >
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="fAccount != null" >
+        #{fAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="fIntimacy != null" >
+        #{fIntimacy,jdbcType=INTEGER},
+      </if>
+      <if test="fAddtime != null" >
+        #{fAddtime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springmvc.entity.UserFriend" >
+    update user_friend
+    <set >
+      <if test="uId != null" >
+        u_id = #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="fAccount != null" >
+        f_account = #{fAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="fIntimacy != null" >
+        f_intimacy = #{fIntimacy,jdbcType=INTEGER},
+      </if>
+      <if test="fAddtime != null" >
+        f_addTime = #{fAddtime,jdbcType=DATE},
+      </if>
+    </set>
+    where f_id = #{fId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springmvc.entity.UserFriend" >
+    update user_friend
+    set u_id = #{uId,jdbcType=INTEGER},
+      f_account = #{fAccount,jdbcType=VARCHAR},
+      f_intimacy = #{fIntimacy,jdbcType=INTEGER},
+      f_addTime = #{fAddtime,jdbcType=DATE}
+    where f_id = #{fId,jdbcType=INTEGER}
+  </update>
+</mapper>

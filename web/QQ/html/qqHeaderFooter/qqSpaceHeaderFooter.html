@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../css/qqHeaderFooter/qqSpaceHeaderFooterStyle.css">
+    <link rel="stylesheet" href="../../css/bootstrap/bootstrap-3.3.7.main.css">
+    <link rel="stylesheet" href="../../css/qqCssAll/qqCssAll.css">
+    <script type="text/javascript" src="../../frames/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../../frames/jquery/jquery.cookie1.41.js"></script>
+    <script type="text/javascript" src="../../frames/jquery/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="../../frames/bootstrap-3.3.7.main.js"></script>
+    <script type="text/javascript" src="../../frames/vue.js"></script>
+    <script type="text/javascript" src="../../js/qqHeaderFooter/qqSpaceHeaderFooterScript.js"></script>
+</head>
+<body style="background-color: #D8F1F6;">
+<header id="header" class="fs">
+    <div class="wrapper">
+        <div id="nav_all">
+            <a id="logo" class="fl" href="" title="qq空间"></a>
+            <ul class="nav">
+                <li class="nav_background_color"><a href="">
+                    <div class="nav_location"><i class="ui-icon"></i><span>个人中心</span></div>
+                </a></li>
+                <li class="nav_background_color"><a href="">
+                    <div class="nav_location"><i class="ui-icon"></i><span>我的主页</span></div>
+                    <i class="drop-down-arrow"></i></a>
+                    <div class="sub_nav">
+                        <div id="home_page" class="fl">
+                            <a href="">
+                                <i class="icon_icenter"></i>
+                                <span>主页</span>
+                            </a>
+                        </div>
+                        <div id="home_page_info" class="fr">
+                            <ul>
+                                <li><a href=""><i class="icon_icenter"></i><span>日志</span></a></li>
+                                <li><a href=""><i class="icon_icenter"></i><span>相册</span></a></li>
+                                <li><a href=""><i class="icon_icenter"></i><span>说说</span></a></li>
+                                <li><a href=""><i class="icon_icenter"></i><span>分享</span></a></li>
+                                <li><a href=""><i class="icon_icenter"></i><span>视频</span></a></li>
+                                <li><a href=""><i class="icon_icenter"></i><span>音乐</span></a></li>
+                                <li><a href=""><i class="icon_icenter"></i><span>留言板</span></a></li>
+                                <li><a href=""><i class="icon_icenter"></i><span>个人档</span></a></li>
+                                <li><a href=""><i class="icon_icenter"></i><span>收藏</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav_background_color"><a href="">
+                    <div class="nav_location"><i class="ui-icon"></i><span id="message-num"><b
+                            id="recent_add_close_friend" class="u-friend-num"></b></span><span>好友</span></div>
+                    <i class="drop-down-arrow"></i></a>
+                    <div class="sub_nav">
+                        <div id="lfc_intimacy" class="fl">
+                            <div id="lfc" class="fl">
+                                <a href="">
+                                    <i class="icon_icenter"></i>
+                                    <span>寻找好友</span>
+                                </a>
+                            </div>
+                            <div id="intimacy" class="fl">
+                                <a href="">
+                                    <i class="icon_icenter"></i>
+                                    <span>亲密度</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="rcc" class="fr">
+                            <div id="sc">
+                                <h6 class="fl">最近联络好友</h6>
+                                <div id="sc_all" class="fr">
+                                    <input class="search_friends" type="text" placeholder="搜索好友"/>
+                                    <i class="sc_ui-icon"></i>
+                                </div>
+                            </div>
+                            <div id="rac_all">
+                                <ul class="friends-style">
+                                    <li v-for="item in items"><a href=""><img class="lay"
+                                            :data-original="item.uImg"
+                                            alt=""/><span class="user_name">{{item.uName}}</span><i
+                                            class="icon_icenter"><span>{{item.num}}</span></i></a></li>
+
+                                </ul>
+                            </div>
+                            <div id="raf" class="fl">
+                                <a href=""><span>最近添加好友</span><span id="friends_count" class="u-friend-num"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav_background_color"><a href="">
+                    <div class="nav_location"><i class="ui-icon"></i><span>游戏</span></div>
+                    <i class="drop-down-arrow"></i></a>
+                    <div class="sub_nav">
+                        <div id="games_all" class="fl">
+                            <div id="ism">
+                                <a href="">
+                                    <i class="icon_icenter"></i>
+                                    <span>积分商城</span>
+                                </a>
+                            </div>
+                            <div id="the_daily_gift_bag">
+                                <a href="">
+                                    <i class="icon_icenter"></i>
+                                    <i class="icon-prize"></i>
+                                    <span>每日礼包</span>
+                                </a>
+                            </div>
+                            <div id="looking_for_a_game">
+                                <a href="">
+                                    <i class="icon_icenter"></i>
+                                    <i class="icon-prize"></i>
+                                    <span>找游戏</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="games" class="fr">
+                            <div id="games_info">
+                                <ul>
+                                    <li v-for="item in items"><a :href="item.g_location"><img class="lay"
+                                            :data-original="item.g_img"
+                                            alt=""/><br><span>{{item.g_name}}</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav_background_color"><a href="">
+                    <div class="nav_location"><i class="ui-icon"></i><span>装扮</span></div>
+                    <i class="drop-down-arrow"></i></a>
+                    <div class="sub_nav">
+                        <div id="dress_up_all" class="fl">
+                            <div id="akd_up">
+                                <a href="">
+                                    <i class="icon_icenter"></i>
+                                    <span>一键装扮</span>
+                                </a>
+                            </div>
+                            <div id="dum">
+                                <a href="">
+                                    <i class="icon_icenter"></i>
+                                    <span>装扮商城</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="dress_up" class="fl">
+                            <ul class="fr" id="du-name">
+                                <li v-for="(item,index) in items" ><span @mouseover="mouseover(index)">{{item.du_name}}</span></li>
+                            </ul>
+                            <div id="dress_up_page" class="fr">
+                                <div class="the-skin-img">
+                                    <a href='' v-for='item in items[0].du_img_all'><img class='lay' :src='item.du_img' alt=''/></a>
+                                </div>
+                                <div class="the-skin-img">
+                                    <a href='' v-for='item in items[1].du_img_all'><img class='lay' :src='item.du_img' alt=''/></a>
+                                </div>
+                                <div class="the-skin-img">
+                                    <a href='' v-for='item in items[2].du_img_all'><img class='lay' :src='item.du_img' alt=''/></a>
+                                </div>
+                                <div class="the-skin-img">
+                                    <a href='' v-for='item in items[3].du_img_all'><img class='lay' :src='item.du_img' alt=''/></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="user_function" class="fr">
+            <div id="music_and_user_query" class="fl">
+                <div id="music">
+                    <a href="" id="unlocking_music"></a>
+                    <a href="" id="music_rhythm"></a>
+                </div>
+                <div id="user_query" class="fr">
+                    <input class="search_friends" type="text" placeholder="用户/游戏/动态"/>
+                    <a href=""><i class="ui-icon"></i></a>
+
+                    <div class="sub_nav">
+                        <div id="correlation_apply">
+                            <a href=""><i class="ca_icon_icenter"></i><span>特别关心</span></a>
+                            <a href=""><i class="ca_icon_icenter"></i><span>可能认识的人</span></a>
+                            <a href=""><i class="ca_icon_icenter"></i><span>认证空间</span></a>
+                            <a href=""><i class="ca_icon_icenter"></i><span>游戏应用</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="user_info" class="fr">
+                <a href="" id="user_name" class="fl">
+                    <img class="user-img" src=""
+                         alt="用户照片"/>
+                    <span class="user-name">barten...</span>
+                </a>
+                <a href="javascript:;" id="esc" class="fr">
+                    <i data-toggle="tooltip" data-placement="top"
+                       title="退出" class="ui-icon"></i>
+                </a>
+                <div href="" id="update_user_info" class="fr">
+                    <i class="ui-icon"></i>
+                    <div class="sub_nav">
+                        <div class="mb">
+                            <ul>
+                                <li><a href="">修改资料</a></li>
+                                <li><a href="">主页排版</a></li>
+                                <li><a href="">空间设置</a></li>
+                                <li><a href="">权限设置</a></li>
+                            </ul>
+                            <div class="line"></div>
+                            <ul>
+                                <li><a href="">帮助中心</a></li>
+                                <li><a href="">意见反馈</a></li>
+                                <li><a href="">安全防护</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="open_diamond" class="fr">
+                    <i class="ui-icon"></i>
+                    <div class="sub_nav">
+                        <ul>
+                            <li><a href="">修改资料</a></li>
+                            <li><a href="">主页排版</a></li>
+                            <li><a href="">空间设置</a></li>
+                            <li><a href="">权限设置</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="gix"></div>
+<!--qq主页身体部分-->
+<div id="body">
+</div>
+<footer class="footer" id="fs">
+    <div class="wrapper">
+        <p>
+        <div>
+            <a href="">空间手机版</a><span>|</span>
+            <a href="">黄钻贵族</a><span>|</span>
+            <a href="">官方Qzone</a><span>|</span>
+            <a href="">QQ互联网</a><span>|</span>
+            <a href="">认证服务</a><span>|</span>
+            <a href="">腾讯博客</a><span>|</span>
+            <a href="">腾讯客服</a><span>|</span>
+            <a href="">QQ空间服务协议</a><span>|</span>
+            <a href="">Complaint Guidelines</a><span>|</span>
+            <a href="">粤网文[2017]6138-1456号</a>
+        </div>
+        </p>
+        <p>
+
+        <div>
+            <span>Copyright © 2005 - 2017 </span><a href="">Tencent.All Rights Reserved.</a>
+        </div>
+        </p>
+
+        <p>
+
+        <div>
+            <span>腾讯公司</span>
+            <a href="">版权所有</a>
+        </div>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

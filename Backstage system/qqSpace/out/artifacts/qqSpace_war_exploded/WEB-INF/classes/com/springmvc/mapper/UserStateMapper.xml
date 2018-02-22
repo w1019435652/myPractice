@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springmvc.dao.UserStateMapper">
+  <resultMap id="BaseResultMap" type="com.springmvc.entity.UserState">
+    <id column="s_id" jdbcType="INTEGER" property="sId" />
+    <result column="u_id" jdbcType="INTEGER" property="uId" />
+    <result column="s_title" jdbcType="VARCHAR" property="sTitle" />
+    <result column="s_browseNum" jdbcType="INTEGER" property="sBrowsenum" />
+    <result column="s_video" jdbcType="VARCHAR" property="sVideo" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    s_id, u_id, s_title, s_browseNum, s_video
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_state
+    where s_id = #{sId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user_state
+    where s_id = #{sId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.springmvc.entity.UserState">
+    insert into user_state (s_id, u_id, s_title, 
+      s_browseNum, s_video)
+    values (#{sId,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, #{sTitle,jdbcType=VARCHAR}, 
+      #{sBrowsenum,jdbcType=INTEGER}, #{sVideo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.springmvc.entity.UserState">
+    insert into user_state
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sId != null">
+        s_id,
+      </if>
+      <if test="uId != null">
+        u_id,
+      </if>
+      <if test="sTitle != null">
+        s_title,
+      </if>
+      <if test="sBrowsenum != null">
+        s_browseNum,
+      </if>
+      <if test="sVideo != null">
+        s_video,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sId != null">
+        #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null">
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="sTitle != null">
+        #{sTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="sBrowsenum != null">
+        #{sBrowsenum,jdbcType=INTEGER},
+      </if>
+      <if test="sVideo != null">
+        #{sVideo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springmvc.entity.UserState">
+    update user_state
+    <set>
+      <if test="uId != null">
+        u_id = #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="sTitle != null">
+        s_title = #{sTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="sBrowsenum != null">
+        s_browseNum = #{sBrowsenum,jdbcType=INTEGER},
+      </if>
+      <if test="sVideo != null">
+        s_video = #{sVideo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where s_id = #{sId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springmvc.entity.UserState">
+    update user_state
+    set u_id = #{uId,jdbcType=INTEGER},
+      s_title = #{sTitle,jdbcType=VARCHAR},
+      s_browseNum = #{sBrowsenum,jdbcType=INTEGER},
+      s_video = #{sVideo,jdbcType=VARCHAR}
+    where s_id = #{sId,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="com.springmvc.entity.UserState">
+    <id column="s_id" jdbcType="INTEGER" property="sId" />
+    <result column="u_id" jdbcType="INTEGER" property="uId" />
+    <result column="s_title" jdbcType="VARCHAR" property="sTitle" />
+    <result column="s_browseNum" jdbcType="INTEGER" property="sBrowsenum" />
+    <result column="s_video" jdbcType="VARCHAR" property="sVideo" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    s_id, u_id, s_title, s_browseNum, s_video
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from user_state
+    where s_id = #{sId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from user_state
+    where s_id = #{sId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.springmvc.entity.UserState">
+    insert into user_state (s_id, u_id, s_title, 
+      s_browseNum, s_video)
+    values (#{sId,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, #{sTitle,jdbcType=VARCHAR}, 
+      #{sBrowsenum,jdbcType=INTEGER}, #{sVideo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.springmvc.entity.UserState">
+    insert into user_state
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sId != null">
+        s_id,
+      </if>
+      <if test="uId != null">
+        u_id,
+      </if>
+      <if test="sTitle != null">
+        s_title,
+      </if>
+      <if test="sBrowsenum != null">
+        s_browseNum,
+      </if>
+      <if test="sVideo != null">
+        s_video,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sId != null">
+        #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="uId != null">
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="sTitle != null">
+        #{sTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="sBrowsenum != null">
+        #{sBrowsenum,jdbcType=INTEGER},
+      </if>
+      <if test="sVideo != null">
+        #{sVideo,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springmvc.entity.UserState">
+    update user_state
+    <set>
+      <if test="uId != null">
+        u_id = #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="sTitle != null">
+        s_title = #{sTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="sBrowsenum != null">
+        s_browseNum = #{sBrowsenum,jdbcType=INTEGER},
+      </if>
+      <if test="sVideo != null">
+        s_video = #{sVideo,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where s_id = #{sId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springmvc.entity.UserState">
+    update user_state
+    set u_id = #{uId,jdbcType=INTEGER},
+      s_title = #{sTitle,jdbcType=VARCHAR},
+      s_browseNum = #{sBrowsenum,jdbcType=INTEGER},
+      s_video = #{sVideo,jdbcType=VARCHAR}
+    where s_id = #{sId,jdbcType=INTEGER}
+  </update>
+</mapper>

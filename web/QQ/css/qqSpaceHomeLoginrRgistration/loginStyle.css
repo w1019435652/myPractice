@@ -1,0 +1,249 @@
+#login-body {
+    background:no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    font-size: 12px;
+}
+
+#login-head {
+    margin-top: 10px;
+    height: 50px;
+}
+
+#logoImg .icon_qzone_logo {
+    background-image: url("https://qzonestyle.gtimg.cn/qzone_v6/proj_qzonelogin/img/qzone-ad-login-logo-dark.32@2x.png");
+    background-repeat: no-repeat;
+    background-size: 183px 50px;
+}
+
+#advertising-logo .icon_qzone_logo {
+    background-image: url('https://qzonestyle.gtimg.cn/qzone/space_item/boss_pic/2429_2017_6/1497234257200_724951.png');
+    background-repeat: no-repeat;
+}
+#advertising-logo {
+    margin-left: 30px;
+}
+
+#advertising-login {
+    margin-top: 35px;
+    height: 320px;
+    background-color: #ffffff;
+}
+
+#advertising-img {
+    position: relative;
+    height: 320px;
+}
+
+#advertising img {
+    width: 570px;
+    height: 320px;
+}
+
+.advertising-prompting {
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    background-color: #999999;
+    color: #ffffff;
+    padding: 3px;
+}
+
+.login-all {
+    text-align: center;
+    border-radius: 3px;
+    border: 2px solid #eee;
+    height: 316px;
+    width: 422px;
+    position: relative;
+}
+
+.login-all h2 {
+    font-weight: normal;
+    margin: 10px 0 15px 0;
+}
+
+.login-all p a {
+    color: #3481CF;
+    display: inline-block;
+}
+
+.login-all p {
+    font-size: 16px;
+}
+
+#login-qr-code {
+    position: relative;
+}
+
+#qr-code {
+    margin-top: 35px;
+    border: 1px solid #D3D3D3;
+    width: 134px;
+    height: 134px;
+    position: relative;
+}
+
+#scan-background {
+    display: none;
+    top: 0px;
+    right: 32px;
+    position: absolute;
+    width: 160px;
+    height: 198px;
+    background: url(//imgcache.qq.com/ptlogin/v4/style/20/images/shouQ_v2/small_24_tiny.png) no-repeat;
+}
+
+.lrf {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+}
+
+.lrf ul li {
+    float: left;
+    height: 12px;
+    line-height: 12px;
+    border-right: 1px solid #bfbfbf;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.lrf ul li:nth-child(3n) {
+    padding-right: 0px;
+    border-right: none;
+}
+
+.lrf ul li a {
+    color: #666;
+}
+
+#advertising-login .login-all:nth-child(3) {
+    display: none;
+}
+.inputOuter {
+    width: 272px;
+    height: 42px;
+    background: url(//imgcache.qq.com/ptlogin/v4/style/40/images/icon_3_tiny.png) -1px -1px no-repeat;
+    _background: url(//imgcache.qq.com/ptlogin/v4/style/40/images/icon_3_8.png) -1px -1px no-repeat;
+}
+#anc {
+    display: inline-block;
+    margin-top: 40px;
+}
+#anc .inputOuter input {
+    display: block;
+    width: 258px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    height: 39px;
+    padding: 10px 0 10px 10px;
+    line-height: 18px;
+    background: 0 0;
+    color: #333;
+    font-family: Verdana, Tahoma, Arial;
+    font-size: 16px;
+    border: none;
+    outline: medium;
+}
+
+#anc .inputOuter:nth-child(2) {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#user-login {
+    display: block;
+    width: 272px;
+    height: 40px;
+    background-color: #86CE2F;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 17px;
+}
+#dtw {
+    text-align: center;
+    margin-top: 130px;
+}
+
+#dtw ul {
+    display: inline-block;
+    margin: 0 auto;
+}
+#dtw ul li {
+    width: 60px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin: 0 5px;
+    position: relative;
+}
+#dtw ul li a {
+    color: #ffffff;
+    position: relative;
+}
+#dtw ul li a i{
+    margin-bottom: 5px;
+}
+#dtw ul li a span{
+    white-space: pre-wrap;
+}
+#dtw ul li:nth-child(1) a .icon-refresh-v10 {
+    background-image: url(https://qzonestyle.gtimg.cn/qzone_v6/proj_qzonelogin/sprite/qzonelogin-jan160520135013@2x.png);
+    background-size: 358px 28px;
+    background-position: -210px 0;
+}
+#dtw ul li:nth-child(2) a .icon-refresh-v10 {
+    background-image: url(https://qzonestyle.gtimg.cn/qzone_v6/proj_qzonelogin/sprite/qzonelogin-jan160520135013@2x.png);
+    background-size: 358px 28px;
+    background-position: -240px 0;
+}
+#dtw ul li:nth-child(3) a .icon-refresh-v10 {
+    background-image: url(https://qzonestyle.gtimg.cn/qzone_v6/proj_qzonelogin/sprite/qzonelogin-jan160520135013@2x.png);
+    background-size: 358px 28px;
+    background-position: -270px 0;
+}
+#dtw ul li:nth-child(4) a .icon-refresh-v10 {
+    background-image: url(https://qzonestyle.gtimg.cn/qzone_v6/proj_qzonelogin/sprite/qzonelogin-jan160520135013@2x.png);
+    background-size: 358px 28px;
+    background-position: -330px 0;
+}
+#dtw ul li:nth-child(5) a .icon-refresh-v10 {
+    background-image: url(https://qzonestyle.gtimg.cn/qzone_v6/proj_qzonelogin/sprite/qzonelogin-jan160520135013@2x.png);
+    background-size: 358px 28px;
+    background-position: -300px 0;
+}
+#login-footer,#login-footer .wrapper a{
+    color: #ffffff;
+}
+#login-footer{
+    margin-top: 40px;
+}
+#security-login{
+    position: relative;
+}
+#els{
+    position: relative;
+    position: absolute;
+    top: 25px;
+    font-size: 13px;
+    left: 125px;
+}
+#err-login-text{
+    margin-left: 22px;
+}
+.err-css{
+    color: #ff3b30;
+    display: none;
+}
+.err-login-img{
+    position: absolute;
+    left: 3px;
+    height: 18px;
+    line-height: 18px;
+    width: 18px;
+    background: url(//imgcache.qq.com/ptlogin/v4/style/40/images/icon_3_tiny.png) 0 -162px no-repeat;
+    _background: url(//imgcache.qq.com/ptlogin/v4/style/40/images/icon_3_8.png) 0 -162px no-repeat;
+}

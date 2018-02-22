@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springmvc.dao.UserStateimgMapper" >
+  <resultMap id="BaseResultMap" type="com.springmvc.entity.UserStateimg" >
+    <id column="si_id" property="siId" jdbcType="INTEGER" />
+    <result column="s_id" property="sId" jdbcType="INTEGER" />
+    <result column="s_img" property="sImg" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    si_id, s_id, s_img
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user_stateimg
+    where si_id = #{siId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from user_stateimg
+    where si_id = #{siId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.springmvc.entity.UserStateimg" >
+    insert into user_stateimg (si_id, s_id, s_img
+      )
+    values (#{siId,jdbcType=INTEGER}, #{sId,jdbcType=INTEGER}, #{sImg,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.springmvc.entity.UserStateimg" >
+    insert into user_stateimg
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="siId != null" >
+        si_id,
+      </if>
+      <if test="sId != null" >
+        s_id,
+      </if>
+      <if test="sImg != null" >
+        s_img,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="siId != null" >
+        #{siId,jdbcType=INTEGER},
+      </if>
+      <if test="sId != null" >
+        #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="sImg != null" >
+        #{sImg,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springmvc.entity.UserStateimg" >
+    update user_stateimg
+    <set >
+      <if test="sId != null" >
+        s_id = #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="sImg != null" >
+        s_img = #{sImg,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where si_id = #{siId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springmvc.entity.UserStateimg" >
+    update user_stateimg
+    set s_id = #{sId,jdbcType=INTEGER},
+      s_img = #{sImg,jdbcType=VARCHAR}
+    where si_id = #{siId,jdbcType=INTEGER}
+  </update>
+</mapper>

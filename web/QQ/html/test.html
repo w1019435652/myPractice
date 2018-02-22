@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+    <script type="text/javascript" src="../frames/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../frames/jquery/jquery.lazyload.min.js"></script>
+    <style>
+        #my-box{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="my-box">
+        <div class="box" style="background-color: red">红色</div>
+        <div class="box" style="background-color: blue">蓝色</div>
+        <div class="box" style="background-color: #ffff00">黄色</div>
+    </div>
+    <button id="click">点击我</button>
+<script>
+    document.getElementById("click").onclick = function(){
+        $(".box").css("flex","1");
+    }
+</script>
+</body>
+</html>

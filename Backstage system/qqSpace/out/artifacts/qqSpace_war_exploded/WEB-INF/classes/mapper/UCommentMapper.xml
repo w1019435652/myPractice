@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springmvc.dao.UCommentMapper" >
+  <resultMap id="BaseResultMap" type="com.springmvc.entity.UComment" >
+    <id column="c_id" property="cId" jdbcType="INTEGER" />
+    <result column="s_id" property="sId" jdbcType="INTEGER" />
+    <result column="c_account" property="cAccount" jdbcType="VARCHAR" />
+    <result column="c_aComment" property="cAcomment" jdbcType="VARCHAR" />
+    <result column="c_beAccount" property="cBeaccount" jdbcType="VARCHAR" />
+    <result column="c_bComment" property="cBcomment" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    c_id, s_id, c_account, c_aComment, c_beAccount, c_bComment
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from u_comment
+    where c_id = #{cId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from u_comment
+    where c_id = #{cId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.springmvc.entity.UComment" >
+    insert into u_comment (c_id, s_id, c_account, 
+      c_aComment, c_beAccount, c_bComment
+      )
+    values (#{cId,jdbcType=INTEGER}, #{sId,jdbcType=INTEGER}, #{cAccount,jdbcType=VARCHAR}, 
+      #{cAcomment,jdbcType=VARCHAR}, #{cBeaccount,jdbcType=VARCHAR}, #{cBcomment,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.springmvc.entity.UComment" >
+    insert into u_comment
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="cId != null" >
+        c_id,
+      </if>
+      <if test="sId != null" >
+        s_id,
+      </if>
+      <if test="cAccount != null" >
+        c_account,
+      </if>
+      <if test="cAcomment != null" >
+        c_aComment,
+      </if>
+      <if test="cBeaccount != null" >
+        c_beAccount,
+      </if>
+      <if test="cBcomment != null" >
+        c_bComment,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="cId != null" >
+        #{cId,jdbcType=INTEGER},
+      </if>
+      <if test="sId != null" >
+        #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="cAccount != null" >
+        #{cAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cAcomment != null" >
+        #{cAcomment,jdbcType=VARCHAR},
+      </if>
+      <if test="cBeaccount != null" >
+        #{cBeaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cBcomment != null" >
+        #{cBcomment,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.springmvc.entity.UComment" >
+    update u_comment
+    <set >
+      <if test="sId != null" >
+        s_id = #{sId,jdbcType=INTEGER},
+      </if>
+      <if test="cAccount != null" >
+        c_account = #{cAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cAcomment != null" >
+        c_aComment = #{cAcomment,jdbcType=VARCHAR},
+      </if>
+      <if test="cBeaccount != null" >
+        c_beAccount = #{cBeaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="cBcomment != null" >
+        c_bComment = #{cBcomment,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where c_id = #{cId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.springmvc.entity.UComment" >
+    update u_comment
+    set s_id = #{sId,jdbcType=INTEGER},
+      c_account = #{cAccount,jdbcType=VARCHAR},
+      c_aComment = #{cAcomment,jdbcType=VARCHAR},
+      c_beAccount = #{cBeaccount,jdbcType=VARCHAR},
+      c_bComment = #{cBcomment,jdbcType=VARCHAR}
+    where c_id = #{cId,jdbcType=INTEGER}
+  </update>
+</mapper>

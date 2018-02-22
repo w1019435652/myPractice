@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet"
+          href="../../css/qqSpaceHomePageBody/qqSpacePersonalCenter/qqSpaceBodyRight/qqSpaceMyStateStyle.css">
+    <script type="text/javascript"
+            src="../../js/qqSpaceHomePageBody/qqSpacePersonalCenter/qqSpaceBodyRight/qqSpaceMyStateScript.js"></script>
+</head>
+<body>
+<div id="time-sign-in-all" class="body-right">
+    <a href="">
+        <div id="time-sign-in" class="fl"><h4 id="weeks" class="weeks-css">周四</h4><span id="on-the-day"
+                                                                                        class="on-the-day-css">10.26</span>
+        </div>
+        <div id="sign-in" class="fr body-right-borderColor-mod">
+            <span class="time-sign-in-top">签到</span>
+
+            <div id="days-css" class="time-sign-in-top">
+                <span><strong>0</strong></span>
+                <br/><span><strong>Days</strong></span>
+            </div>
+        </div>
+    </a>
+</div>
+<div class="body-right body-right-borderColor-mod" id="body-right-advertising">
+    <a href=""><img
+            src="http://pgdt.gtimg.cn/gdt/0/DAAHu6eADcAB4AAYBZ9-TdDE7JhjNW.jpg/0?ck=c4f962039fa3dd62fe4cdb357d18f007"
+            alt=""/></a>
+    <a href="" class="ae-nav">
+        <i></i>
+        <i></i>
+    </a>
+</div>
+<div class="body-right body-right-borderColor-mod body-right-padding np-all" id="everyone-pat-all">
+    <span class="body-right-headline">大家都在看</span>
+    <ul id="everyone-pat" class="np">
+        <li v-for="(item,index) in items" v-if="index>=0&&index<3">
+            <a href=""><img :src="item.ep_img" alt=""/> </a>
+
+            <div class="everyone-pat-title fr">
+                <div>
+                    <a href="">{{item.ep_title_text}}</a>
+                </div>
+                <div class="everyone-pat-gal-all">
+                    <a href="" class="everyone-pat-gal">
+                        <i class="ui-icon"></i>
+                        <span class="give-a-like-text">赞</span>
+                    </a>
+                        <span class="gal-num-external-style">
+                            <span>{{item.ep_give_like_num}}</span>
+                            <b class="left-triangle">
+                                <b class="ui_trig"></b>
+                                <b class="ui_trig"></b>
+                            </b>
+                        </span>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="previous-next-page">
+        <a href="javascript:;" title="上一页" class="previous"><i class="ui-icon"></i></a>
+        <a href="javascript:;" title="下一页" class="next"><i class="ui-icon"></i></a>
+    </div>
+</div>
+<div class="body-right body-right-padding np-all aso" id="a-string-of-all">
+    <ul class="a-string-of">
+        <li><a href="javascript:;" onclick="wwb_all(0,1)">谁看过我</a></li>
+        <li><a href="javascript:;" onclick="wwb_all(1,2)">我看过谁</a></li>
+        <li><a href="javascript:;" onclick="wwb_all(2,3)">被挡访客</a></li>
+    </ul>
+    <div id="br-open-yellow-diamonds-all">
+    </div>
+    <div id="wwb">
+        <ul class="friends-style np">
+        </ul>
+    </div>
+    <div class="previous-next-page">
+        <a href="javascript:;" title="上一页" class="previous"><i class="ui-icon"></i></a>
+        <a href="javascript:;" title="下一页" class="next"><i class="ui-icon"></i></a>
+        <a href="javascript:;" title="更多" class="more"><i class="ui-icon"></i></a>
+    </div>
+    <div id="tab">
+        <ul>
+            <li><p>今日浏览</p><a href="" id="ttb"></a></li>
+            <li><p>总浏览</p><a href="" id="always-browse"></a></li>
+            <li><p>被挡访客</p><a href="" id="blocked-visitors"></a></li>
+        </ul>
+    </div>
+</div>
+<div class="body-right body-right-padding np-all" id="gift">
+    <span class="body-right-headline">礼物</span>
+    <ul class="friends-style np wh-50" id="gift-info">
+        <li v-for="(item,index) in items" v-if="index>=0&&index<3">
+            <a href="" class="fl"><img :src="item.g_img" alt=""/> </a>
+
+            <div class="fl gift-user-name">
+                <a href="" :title="item.g_name">{{item.g_name}}</a>
+                <span class="c_7e">{{item.g_fas}}</span>
+            </div>
+            <a href="" class="fr tyf-visiting bg-f2">
+                <i class="ui-icon"></i>
+                <span class="fas">{{item.g_mode}}</span>
+            </a>
+        </li>
+    </ul>
+    <div class="previous-next-page">
+        <a href="javascript:;" title="上一页" class="previous"><i class="ui-icon"></i></a>
+        <a href="javascript:;" title="下一页" class="next"><i class="ui-icon"></i></a>
+        <a href="" id="gmf-gifts" class="fr">给更多好友送礼</a>
+    </div>
+</div>
+<div class="body-right body-right-borderColor-mod body-right-padding np-all aso" id="wi">
+    <ul class="a-string-of">
+        <li><a href="javascript:;" onclick="wi_info(true)">谁在意我</a></li>
+        <li><a href="javascript:;" onclick="wi_info(false)">我在意谁</a></li>
+    </ul>
+    <ul class="friends-style np wh-50" id="wi-info">
+    </ul>
+</div>
+<div class="body-right body-right-borderColor-mod body-right-padding np-all" id="guess-you-like">
+    <span class="body-right-headline">猜你喜欢</span>
+    <div id="gyl-friends-picture">
+        <div id="gyl-user-info">
+        </div>
+        <a class="gul-left-right" id="gul-left" href="javascript:;"><i class="ui-icon"></i></a>
+        <a class="gul-left-right" id="gul-right" href="javascript:;"><i class="ui-icon"></i></a>
+    </div>
+    <div class="friends-style">
+        <a href="javascript:;" class="tyf-visiting bg-f2 fl"><i class="ui-icon"></i><span>赞</span></a>
+        <a href="javascript:;" class="tyf-visiting bg-f2 fr"><span>换一张</span></a>
+    </div>
+    <div id="gul-gal">来成为第一个赞的人</div>
+    <div id="ful-iSayItToo-div">
+        <textarea id="ful-iSayItToo" type="text" placeholder="我也来说一句"/>
+        <div id="publish-expression-div" class="commentaries-function">
+            <div id="expression">
+                <a href="javascript:;" class="fl"><i class="icon-refresh-v9"></i><i class="icon-red-dot"></i></a>
+                <a href="javascript:;" class="fr"><i class="icon-refresh-v9"></i></a>
+                <div class="insert-the-expression by-interval"><a href=""><img
+                        src="http://qzonestyle.gtimg.cn/qzone/em/e113@2x.gif" alt=""/></a><a href=""><img
+                        src="http://qzonestyle.gtimg.cn/qzone/em/e163@2x.gif" alt=""/></a><a href=""><img
+                        src="http://qzonestyle.gtimg.cn/qzone/em/e120@2x.gif" alt=""/></a><a href=""><img
+                        src="http://qzonestyle.gtimg.cn/qzone/em/e100@2x.gif" alt=""/></a></div>
+
+            </div>
+            <a class="publish-show fr" href=""><span>发表</span></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
